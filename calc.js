@@ -11,5 +11,6 @@ function ageCalculator() {
         var year = age_dt.getUTCFullYear();
         var age = Math.abs(year - 1970);
         document.getElementById("result").innerHTML = "Your age is: "+ age + " years";
+   
     }
 }

@@ -7,30 +7,6 @@
     <link rel="stylesheet" href="calc.css" type="text/css">
 </head>
 <body>
-<script>    
-    function ageCalculator() {
-    var userinput = document.getElementById("DOB").value;
-    var dob = new Date(userinput);
-    if (userinput == null || userinput == "") {
-        document.getElementById("message").innerHTML = "Choose a date";
-        return false;
-    } else {
-        var month_diff = Date.now() - dob.getTime();
-        var age_dt = new Date(month_diff);
-        var years = Math.floor(age_dt / 31536000000);
-        var remaining_months = Math.floor((age_dt % 31536000000) / 2628000000);
-        if (remaining_months === 12) {
-            years++;
-            remaining_months = 0;
-        }
-        if (remaining_months > 0) {
-            document.getElementById("result").innerHTML = "Age is: " + years + " years and " + remaining_months + " months";
-        } else {
-            document.getElementById("result").innerHTML = "Age is: " + years + " years exactly";
-        }
-    }
-}
-</script> 
 <div id="container">
     <h1>AGE              CALCULATOR</h1>
     <div class="date-box">
@@ -43,6 +19,8 @@
         <h3 id="result"></h3>
     </div>
 </div>
+
+<script src="calc.js"></script>
 </body>
 
 </html>
